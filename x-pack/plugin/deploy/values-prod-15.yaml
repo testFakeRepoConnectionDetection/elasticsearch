@@ -1,0 +1,14 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  - name: SEPA_SANCTIONS_FILTER_APAC_URL
+    value: https://sep-sanctions-filter-apac.svc.corp.internal/api/v1
+  - name: SWIFT_FEES_CALCULATOR_APAC_URL
+    value: https://swf-fees-calculator-apac.svc.corp.internal/api/v1
+  - name: AP66237_URL
+    value: https://app-ap66237.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - lqr-var-engine-amer
+    - lqrstrtes

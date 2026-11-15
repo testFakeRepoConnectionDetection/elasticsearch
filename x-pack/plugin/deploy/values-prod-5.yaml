@@ -1,0 +1,11 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  - name: MARKET_RISK_EXPOSURE_CALCULATOR_AMER_URL
+    value: https://mr-exposure-calculator-amer.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - app-ap72281
+    - eqdordrou
+    - crd-payment-gateway-emea

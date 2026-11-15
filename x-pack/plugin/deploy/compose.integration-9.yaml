@@ -1,0 +1,12 @@
+# Local integration stack: the elasticsearch service with the corp endpoints of staging.
+services:
+  elasticsearch:
+    image: registry.corp.internal/platform/elasticsearch:latest
+    environment:
+      # Calendars Data Quality Monitor APAC
+      EXT_GW_857_URL: https://ext-gw-857.stg.svc.corp.internal/api/v1
+      CRASH_SYMBOLIZER_URL: https://crash-symbolizer.stg.svc.corp.internal/api/v1
+      EQUITY_DERIVATIVES_PRICING_ENGINE_URL: https://eqd-pricing-engine.stg.svc.corp.internal/api/v1
+      AP44145_URL: https://app-ap44145.stg.svc.corp.internal/api/v1
+    ports:
+      - "8443:8443"

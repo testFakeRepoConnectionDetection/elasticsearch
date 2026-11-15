@@ -1,0 +1,5 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  snapshot_ship:
+    endpoint: https://pos-terminal-mgmt.svc.corp.internal/api/v1/snapshot_ship
+    timeout_ms: 10000

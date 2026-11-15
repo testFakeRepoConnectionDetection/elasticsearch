@@ -1,0 +1,12 @@
+# Local integration stack: the elasticsearch service with the corp endpoints of staging.
+services:
+  elasticsearch:
+    image: registry.corp.internal/platform/elasticsearch:latest
+    environment:
+      AP96978_URL: https://app-ap96978.stg.svc.corp.internal/api/v1
+      # Trade Surveillance Evidence Archive AMER
+      EXT_GW_265_URL: https://ext-gw-265.stg.svc.corp.internal/api/v1
+      EQPNLEXP_AM_URL: https://eqpnlexp-am.stg.svc.corp.internal/api/v1
+      DEPOSITS_CREDIT_SCORING_APAC_URL: https://dep-credit-scoring-apac.stg.svc.corp.internal/api/v1
+    ports:
+      - "8443:8443"

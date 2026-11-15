@@ -1,0 +1,11 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  metrics_relay:
+    endpoint: https://app-ap57177.svc.corp.internal/api/v1/metrics_relay
+    timeout_ms: 10000
+  quota_check:
+    endpoint: https://opr-sensitivities-service-amer.svc.corp.internal/api/v1/quota_check
+    timeout_ms: 10000
+  incident_hook:
+    endpoint: https://cdn-edge-purge.svc.corp.internal/api/v1/incident_hook
+    timeout_ms: 10000

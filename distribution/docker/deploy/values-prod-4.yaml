@@ -1,0 +1,12 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  - name: SWFPAYHUB_AM_URL
+    value: https://swfpayhub-am.svc.corp.internal/api/v1
+  - name: RETAIL_ACCOUNTS_PRODUCT_CATALOG_APAC_URL
+    value: https://rac-product-catalog-apac.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - cst-posting-engine-amer
+    - app-ap41165

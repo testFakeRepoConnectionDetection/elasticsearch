@@ -1,0 +1,11 @@
+# Local integration stack: the elasticsearch service with the corp endpoints of staging.
+services:
+  elasticsearch:
+    image: registry.corp.internal/platform/elasticsearch:latest
+    environment:
+      COUNTERPARTY_RISK_LIMIT_MONITOR_URL: https://ccr-limit-monitor.stg.svc.corp.internal/api/v1
+      MORTGAGES_INTEREST_ENGINE_EMEA_URL: https://mtg-interest-engine-emea.stg.svc.corp.internal/api/v1
+      AP48911_URL: https://app-ap48911.stg.svc.corp.internal/api/v1
+      WEATHER_FEED_URL: https://weather-feed.stg.svc.corp.internal/api/v1
+    ports:
+      - "8443:8443"

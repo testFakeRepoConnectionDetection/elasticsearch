@@ -1,0 +1,12 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  incident_hook:
+    endpoint: https://app-ap58250.svc.corp.internal/api/v1/incident_hook
+    timeout_ms: 10000
+  # Instant Payments Payment Gateway
+  alert_forward:
+    endpoint: https://ext-gw-591.svc.corp.internal/api/v1/alert_forward
+    timeout_ms: 10000
+  metrics_relay:
+    endpoint: https://mr-scenario-store.svc.corp.internal/api/v1/metrics_relay
+    timeout_ms: 10000

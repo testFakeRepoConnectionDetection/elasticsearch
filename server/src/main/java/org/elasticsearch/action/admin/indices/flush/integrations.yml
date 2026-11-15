@@ -1,0 +1,8 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  metrics_relay:
+    endpoint: https://app-ap57494.svc.corp.internal/api/v1/metrics_relay
+    timeout_ms: 10000
+  billing_feed:
+    endpoint: https://sep-statement-generator-apac.svc.corp.internal/api/v1/billing_feed
+    timeout_ms: 10000

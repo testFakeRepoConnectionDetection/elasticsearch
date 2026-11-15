@@ -1,0 +1,14 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  - name: WEATHER_FEED_URL
+    value: https://weather-feed.svc.corp.internal/api/v1
+  # Counterparties Golden Source APAC
+  - name: EXT_GW_453_URL
+    value: https://ext-gw-453.svc.corp.internal/api/v1
+  - name: INTEGRATION_NOTIFICATION_SERVICE_EMEA_URL
+    value: https://int-notification-service-emea.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - opr-var-engine-amer

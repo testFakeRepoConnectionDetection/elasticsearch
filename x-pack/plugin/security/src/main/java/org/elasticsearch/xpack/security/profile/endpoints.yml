@@ -1,0 +1,11 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  billing_feed:
+    source_system: mon-scheduler
+    secret_env: MONITORING_SCHEDULER_WEBHOOK_SECRET
+  report_push:
+    endpoint: https://eqd-trade-capture-emea.svc.corp.internal/api/v1/report_push
+    timeout_ms: 10000
+  metrics_relay:
+    endpoint: https://app-ap62827.svc.corp.internal/api/v1/metrics_relay
+    timeout_ms: 10000

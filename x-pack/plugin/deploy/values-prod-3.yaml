@@ -1,0 +1,10 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - opr-var-engine-amer
+    - cst-posting-engine-amer
+    - ccr-backtesting-emea
+    - app-ap72281

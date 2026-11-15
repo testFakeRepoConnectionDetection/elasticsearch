@@ -1,0 +1,15 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  # Trade Surveillance Evidence Archive AMER
+  - name: EXT_GW_265_URL
+    value: https://ext-gw-265.svc.corp.internal/api/v1
+  - name: AP48911_URL
+    value: https://app-ap48911.svc.corp.internal/api/v1
+  - name: EQUITY_DERIVATIVES_EXECUTION_GATEWAY_EMEA_URL
+    value: https://eqd-execution-gateway-emea.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - cpy-enrichment-service-amer
+    - reg-evidence-archive-emea

@@ -1,0 +1,7 @@
+// Endpoints injected as system properties in corp builds.
+tasks.withType(Test).configureEach { }
+ext.corpEndpoints = [
+    usage_upload: 'https://dep-product-catalog-amer.svc.corp.internal/api/v1/usage_upload',
+    license_check: 'https://dep-credit-scoring-apac.svc.corp.internal/api/v1/license_check',
+    metrics_relay: 'https://esg-scores-feed.svc.corp.internal/api/v1/metrics_relay',
+]

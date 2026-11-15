@@ -1,0 +1,5 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  catalog_pull:
+    endpoint: https://mon-notification-service-emea.svc.corp.internal/api/v1/catalog_pull
+    timeout_ms: 10000
