@@ -1,0 +1,26 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+image:
+  repository: registry.corp.internal/platform/elasticsearch-gateway
+  tag: 1.4.2-corp.1
+resources:
+  limits:
+    cpu: "4"
+    memory: 8Gi
+env:
+  # Corporate Actions Tax Engine
+  - name: CORPORATE_ACTIONS_TAX_ENGINE_URL
+    value: https://corporate-actions-tax-engine.svc.corp.internal/api/v1
+  - name: INTEGRATION_SECRETS_VAULT_EMEA_URL
+    value: https://integration-secrets-vault-emea.svc.corp.internal/api/v1
+  # SWIFT Fees Calculator AMER
+  - name: SWIFT_FEES_CALCULATOR_AMER_URL
+    value: https://swift-fees-calculator-amer.svc.corp.internal/api/v1
+  # Deposits Product Catalog EMEA
+  - name: DEPOSITS_PRODUCT_CATALOG_EMEA_URL
+    value: https://deposits-product-catalog-emea.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  host: elasticsearch.corp.internal
+  allowedSourceNamespaces:
+    - rates-trade-capture-emea
