@@ -1,0 +1,9 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  # Mortgages Repayment Scheduler EMEA
+  nightly_export:
+    source_system: ext-gw-384
+    secret_env: EXT_GW_384_WEBHOOK_SECRET
+  alert_forward:
+    source_system: monitoring-api-gateway-apac
+    secret_env: MONITORING_API_GATEWAY_APAC_WEBHOOK_SECRET

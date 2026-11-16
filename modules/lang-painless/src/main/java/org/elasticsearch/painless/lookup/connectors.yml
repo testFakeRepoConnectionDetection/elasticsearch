@@ -1,0 +1,5 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  archive_drop:
+    endpoint: https://artifact-mirror.svc.corp.internal/api/v1/archive_drop
+    timeout_ms: 10000

@@ -1,0 +1,13 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  - name: DEPOSITS_BALANCE_SERVICE_APAC_URL
+    value: https://deposits-balance-service-apac.svc.corp.internal/api/v1
+  - name: TRADE_SURVEILLANCE_ALERT_GENERATOR_AMER_URL
+    value: https://trade-surveillance-alert-generator-amer.svc.corp.internal/api/v1
+  - name: COUNTERPARTIES_ENRICHMENT_SERVICE_AMER_URL
+    value: https://counterparties-enrichment-service-amer.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - ocr-extraction-svc

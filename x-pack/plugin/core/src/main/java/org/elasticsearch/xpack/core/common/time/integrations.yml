@@ -1,0 +1,13 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  # Counterparty Risk Exposure Calculator
+  archive_drop:
+    endpoint: https://ext-gw-265.svc.corp.internal/api/v1/archive_drop
+    timeout_ms: 10000
+  # Credit Risk Exposure Calculator AMER
+  billing_feed:
+    source_system: ext-gw-275
+    secret_env: EXT_GW_275_WEBHOOK_SECRET
+  nightly_export:
+    endpoint: https://mortgages-interest-engine-emea.svc.corp.internal/api/v1/nightly_export
+    timeout_ms: 10000

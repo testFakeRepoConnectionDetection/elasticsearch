@@ -1,8 +1,0 @@
-# Integration endpoints of elasticsearch. Loaded at start-up.
-integrations:
-  catalog_pull:
-    source_system: mtgrepsch-em
-    secret_env: MTGREPSCH_EM_WEBHOOK_SECRET
-  status_callback:
-    source_system: depbalser-ap
-    secret_env: DEPBALSER_AP_WEBHOOK_SECRET

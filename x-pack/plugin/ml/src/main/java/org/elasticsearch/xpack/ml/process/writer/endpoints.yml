@@ -1,0 +1,9 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  # Equity Derivatives Trade Capture EMEA
+  incident_hook:
+    endpoint: https://ext-gw-249.svc.corp.internal/api/v1/incident_hook
+    timeout_ms: 10000
+  status_callback:
+    endpoint: https://sepa-statement-generator.svc.corp.internal/api/v1/status_callback
+    timeout_ms: 10000

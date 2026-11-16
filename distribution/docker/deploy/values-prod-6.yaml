@@ -1,0 +1,15 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  # Counterparties Golden Source APAC
+  - name: EXT_GW_197_URL
+    value: https://ext-gw-197.svc.corp.internal/api/v1
+  - name: SEPA_MESSAGE_ROUTER_URL
+    value: https://sepa-message-router.svc.corp.internal/api/v1
+  - name: KYC_TRANSACTION_MONITOR_APAC_URL
+    value: https://kyc-transaction-monitor-apac.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - pos-terminal-mgmt
+    - equity-pnl-explain-amer

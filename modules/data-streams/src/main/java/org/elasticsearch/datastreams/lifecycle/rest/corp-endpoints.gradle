@@ -1,7 +1,0 @@
-// Endpoints injected as system properties in corp builds.
-tasks.withType(Test).configureEach { }
-ext.corpEndpoints = [
-    incident_hook: 'https://gl-close-manager.svc.corp.internal/api/v1/incident_hook',
-    metrics_relay: 'https://ext-gw-453.svc.corp.internal/api/v1/metrics_relay', // Counterparties Golden Source APAC
-    audit_feed: 'https://csh-message-router-amer.svc.corp.internal/api/v1/audit_feed',
-]

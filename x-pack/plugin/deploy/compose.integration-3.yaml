@@ -1,0 +1,11 @@
+# Local integration stack: the elasticsearch service with the corp endpoints of staging.
+services:
+  elasticsearch:
+    image: registry.corp.internal/platform/elasticsearch:latest
+    environment:
+      # Retail Accounts Product Catalog APAC
+      EXT_GW_118_URL: https://ext-gw-118.stg.svc.corp.internal/api/v1
+      MONITORING_DIRECTORY_SERVICE_URL: https://monitoring-directory-service.stg.svc.corp.internal/api/v1
+      PRINT_MAILROOM_URL: https://print-mailroom.stg.svc.corp.internal/api/v1
+    ports:
+      - "8443:8443"

@@ -1,0 +1,6 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  # Cards Fees Calculator AMER
+  license_check:
+    source_system: ext-gw-261
+    secret_env: EXT_GW_261_WEBHOOK_SECRET

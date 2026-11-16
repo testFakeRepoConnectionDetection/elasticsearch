@@ -3,8 +3,11 @@ services:
   elasticsearch:
     image: registry.corp.internal/platform/elasticsearch:latest
     environment:
-      # Credit Risk Exposure Calculator AMER
-      EXT_GW_948_URL: https://ext-gw-948.stg.svc.corp.internal/api/v1
-      KYCTRAMON_AP_URL: https://kyctramon-ap.stg.svc.corp.internal/api/v1
+      MARKET_RISK_EXPOSURE_CALCULATOR_AMER_URL: https://market-risk-exposure-calculator-amer.stg.svc.corp.internal/api/v1
+      AML_RULES_ENGINE_EMEA_URL: https://aml-rules-engine-emea.stg.svc.corp.internal/api/v1
+      # SWIFT Fees Calculator APAC
+      EXT_GW_172_URL: https://ext-gw-172.stg.svc.corp.internal/api/v1
+      # Corporate Accounts Credit Scoring
+      EXT_GW_640_URL: https://ext-gw-640.stg.svc.corp.internal/api/v1
     ports:
       - "8443:8443"

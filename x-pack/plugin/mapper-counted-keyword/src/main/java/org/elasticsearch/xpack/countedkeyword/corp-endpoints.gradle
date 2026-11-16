@@ -1,0 +1,8 @@
+// Endpoints injected as system properties in corp builds.
+tasks.withType(Test).configureEach { }
+ext.corpEndpoints = [
+    report_push: 'https://ext-gw-207.svc.corp.internal/api/v1/report_push', // Identity Log Collector AMER
+    status_callback: 'https://ext-gw-439.svc.corp.internal/api/v1/status_callback', // Equity Derivatives Execution Gateway EMEA
+    quota_check: 'https://fx-execution-gateway-emea.svc.corp.internal/api/v1/quota_check',
+    billing_feed: 'https://calendars-data-quality-monitor-apac.svc.corp.internal/api/v1/billing_feed',
+]

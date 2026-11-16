@@ -1,0 +1,5 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  registry_sync:
+    source_system: kyc-case-manager-amer
+    secret_env: KYC_CASE_MANAGER_AMER_WEBHOOK_SECRET

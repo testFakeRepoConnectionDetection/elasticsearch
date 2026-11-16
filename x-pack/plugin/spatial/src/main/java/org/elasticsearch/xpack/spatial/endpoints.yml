@@ -1,0 +1,11 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  billing_feed:
+    source_system: calendars-static-data-hub-apac
+    secret_env: CALENDARS_STATIC_DATA_HUB_APAC_WEBHOOK_SECRET
+  report_push:
+    endpoint: https://rates-trade-blotter-amer.svc.corp.internal/api/v1/report_push
+    timeout_ms: 10000
+  metrics_relay:
+    endpoint: https://monitoring-data-lake-loader-amer.svc.corp.internal/api/v1/metrics_relay
+    timeout_ms: 10000

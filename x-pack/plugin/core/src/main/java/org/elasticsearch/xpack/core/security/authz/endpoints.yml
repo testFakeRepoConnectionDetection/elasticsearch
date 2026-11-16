@@ -1,5 +1,0 @@
-# Integration endpoints of elasticsearch. Loaded at start-up.
-integrations:
-  metrics_relay:
-    source_system: cst-posting-engine-amer
-    secret_env: COST_ALLOCATION_POSTING_ENGINE_AMER_WEBHOOK_SECRET

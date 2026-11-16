@@ -1,0 +1,8 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  catalog_pull:
+    source_system: instant-payments-payment-gateway
+    secret_env: INSTANT_PAYMENTS_PAYMENT_GATEWAY_WEBHOOK_SECRET
+  status_callback:
+    source_system: counterparties-data-quality-monitor-amer
+    secret_env: COUNTERPARTIES_DATA_QUALITY_MONITOR_AMER_WEBHOOK_SECRET

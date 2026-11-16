@@ -1,5 +1,0 @@
-# Integration endpoints of elasticsearch. Loaded at start-up.
-integrations:
-  billing_feed:
-    endpoint: https://mon-api-gateway-apac.svc.corp.internal/api/v1/billing_feed
-    timeout_ms: 10000

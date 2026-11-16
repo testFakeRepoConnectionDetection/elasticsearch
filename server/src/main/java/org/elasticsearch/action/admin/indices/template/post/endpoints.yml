@@ -1,5 +1,0 @@
-# Integration endpoints of elasticsearch. Loaded at start-up.
-integrations:
-  license_check:
-    source_system: iamlogcol-am
-    secret_env: IAMLOGCOL_AM_WEBHOOK_SECRET

@@ -1,0 +1,18 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  - name: COUNTERPARTIES_ENRICHMENT_SERVICE_AMER_URL
+    value: https://counterparties-enrichment-service-amer.svc.corp.internal/api/v1
+  # Trade Surveillance Evidence Archive AMER
+  - name: EXT_GW_336_URL
+    value: https://ext-gw-336.svc.corp.internal/api/v1
+  # Market Risk Scenario Store
+  - name: EXT_GW_747_URL
+    value: https://ext-gw-747.svc.corp.internal/api/v1
+  # Legal Entities Mapping Service
+  - name: EXT_GW_432_URL
+    value: https://ext-gw-432.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - ext-gw-172  # Liquidity Risk VaR Engine AMER

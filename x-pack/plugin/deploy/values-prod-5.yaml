@@ -1,11 +1,18 @@
 # Production values for the elasticsearch-gateway chart.
 replicaCount: 3
 env:
-  - name: MARKET_RISK_EXPOSURE_CALCULATOR_AMER_URL
-    value: https://mr-exposure-calculator-amer.svc.corp.internal/api/v1
+  - name: DEPOSITS_CREDIT_SCORING_APAC_URL
+    value: https://deposits-credit-scoring-apac.svc.corp.internal/api/v1
+  # SWIFT Payment Hub AMER
+  - name: EXT_GW_823_URL
+    value: https://ext-gw-823.svc.corp.internal/api/v1
+  - name: MORTGAGES_DOCUMENT_STORE_EMEA_URL
+    value: https://mortgages-document-store-emea.svc.corp.internal/api/v1
+  # Cash Management Settlement Engine
+  - name: EXT_GW_948_URL
+    value: https://ext-gw-948.svc.corp.internal/api/v1
+  - name: CUSTODY_EVENT_PROCESSOR_AMER_URL
+    value: https://custody-event-processor-amer.svc.corp.internal/api/v1
 ingress:
   enabled: true
   allowedSourceNamespaces:
-    - app-ap72281
-    - eqdordrou
-    - crd-payment-gateway-emea

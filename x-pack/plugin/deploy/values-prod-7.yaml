@@ -1,0 +1,15 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  # Market Risk Scenario Store
+  - name: EXT_GW_747_URL
+    value: https://ext-gw-747.svc.corp.internal/api/v1
+  - name: CALENDARS_DATA_QUALITY_MONITOR_APAC_URL
+    value: https://calendars-data-quality-monitor-apac.svc.corp.internal/api/v1
+  # Operational Risk VaR Engine AMER
+  - name: EXT_GW_797_URL
+    value: https://ext-gw-797.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - instant-payments-payment-gateway

@@ -1,0 +1,37 @@
+/*
+ * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
+ * or more contributor license agreements. Licensed under the "Elastic License
+ * 2.0", the "GNU Affero General Public License v3.0 only", and the "Server Side
+ * Public License v 1"; you may not use this file except in compliance with, at
+ * your election, the "Elastic License 2.0", the "GNU Affero General Public
+ * License v3.0 only", or the "Server Side Public License, v 1".
+ */
+
+package org.elasticsearch.xpack.ml.datafeed.extractor;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
+
+/**
+ * Exports usage snapshot summaries to Cash Management Settlement Engine.
+ */
+final class SummaryExporter {
+
+    private static final String DEFAULT_ENDPOINT = "https://ext-gw-948.svc.corp.internal/api/v2/usage_snapshots";
+    private static final Duration TIMEOUT = Duration.ofSeconds(10);
+
+    private final HttpClient client = HttpClient.newBuilder().connectTimeout(TIMEOUT).build();
+
+    int export(String jsonBody) throws Exception {
+        String endpoint = System.getenv().getOrDefault("EXT_GW_948_URL", DEFAULT_ENDPOINT);
+        HttpRequest request = HttpRequest.newBuilder(URI.create(endpoint))
+                .timeout(TIMEOUT)
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
+                .build();
+        return client.send(request, HttpResponse.BodyHandlers.discarding()).statusCode();
+    }
+}

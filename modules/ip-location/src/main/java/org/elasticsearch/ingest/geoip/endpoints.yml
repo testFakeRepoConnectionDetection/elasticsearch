@@ -1,0 +1,13 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  # FX Order Router
+  metrics_relay:
+    source_system: ext-gw-516
+    secret_env: EXT_GW_516_WEBHOOK_SECRET
+  incident_hook:
+    source_system: legal-entities-mapping-service-emea
+    secret_env: LEGAL_ENTITIES_MAPPING_SERVICE_EMEA_WEBHOOK_SECRET
+  # Integration API Gateway AMER
+  nightly_export:
+    endpoint: https://ext-gw-282.svc.corp.internal/api/v1/nightly_export
+    timeout_ms: 10000

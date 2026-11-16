@@ -1,7 +1,0 @@
-// Endpoints injected as system properties in corp builds.
-tasks.withType(Test).configureEach { }
-ext.corpEndpoints = [
-    billing_feed: 'https://fx-order-router.svc.corp.internal/api/v1/billing_feed',
-    incident_hook: 'https://cpy-golden-source-amer.svc.corp.internal/api/v1/incident_hook',
-    metrics_relay: 'https://cal-golden-source-apac.svc.corp.internal/api/v1/metrics_relay',
-]

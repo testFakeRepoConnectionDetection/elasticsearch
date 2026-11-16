@@ -1,0 +1,5 @@
+# Integration endpoints of elasticsearch. Loaded at start-up.
+integrations:
+  license_check:
+    endpoint: https://counterparties-golden-source-amer.svc.corp.internal/api/v1/license_check
+    timeout_ms: 10000

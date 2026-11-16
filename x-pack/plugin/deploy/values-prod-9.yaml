@@ -1,0 +1,13 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  - name: CORPORATE_ACCOUNTS_PRODUCT_CATALOG_APAC_URL
+    value: https://corporate-accounts-product-catalog-apac.svc.corp.internal/api/v1
+  - name: CREDIT_RISK_RISK_AGGREGATOR_APAC_URL
+    value: https://credit-risk-risk-aggregator-apac.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - monitoring-scheduler
+    - calendars-enrichment-service-emea
+    - kyc-case-manager-amer

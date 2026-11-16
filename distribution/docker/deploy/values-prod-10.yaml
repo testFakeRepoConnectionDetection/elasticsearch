@@ -1,14 +1,14 @@
 # Production values for the elasticsearch-gateway chart.
 replicaCount: 3
 env:
-  - name: WEATHER_FEED_URL
-    value: https://weather-feed.svc.corp.internal/api/v1
-  # Counterparties Golden Source APAC
-  - name: EXT_GW_453_URL
-    value: https://ext-gw-453.svc.corp.internal/api/v1
-  - name: INTEGRATION_NOTIFICATION_SERVICE_EMEA_URL
-    value: https://int-notification-service-emea.svc.corp.internal/api/v1
+  - name: RATES_FEED_BLOOMLINE_URL
+    value: https://rates-feed-bloomline.svc.corp.internal/api/v1
+  - name: FX_EXECUTION_GATEWAY_EMEA_URL
+    value: https://fx-execution-gateway-emea.svc.corp.internal/api/v1
+  - name: GENERAL_LEDGER_CLOSE_MANAGER_URL
+    value: https://general-ledger-close-manager.svc.corp.internal/api/v1
 ingress:
   enabled: true
   allowedSourceNamespaces:
-    - opr-var-engine-amer
+    - ext-gw-863  # Messaging Data Lake Loader EMEA
+    - ext-gw-485  # Retail Accounts Contract Manager EMEA

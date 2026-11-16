@@ -1,0 +1,14 @@
+# Production values for the elasticsearch-gateway chart.
+replicaCount: 3
+env:
+  - name: CARDS_PAYMENT_GATEWAY_EMEA_URL
+    value: https://cards-payment-gateway-emea.svc.corp.internal/api/v1
+  # Operational Risk VaR Engine AMER
+  - name: EXT_GW_797_URL
+    value: https://ext-gw-797.svc.corp.internal/api/v1
+  - name: RETAIL_ACCOUNTS_CUSTOMER_ONBOARDING_AMER_URL
+    value: https://retail-accounts-customer-onboarding-amer.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  allowedSourceNamespaces:
+    - ext-gw-623  # Counterparty Risk Backtesting EMEA
